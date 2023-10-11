@@ -1,0 +1,33 @@
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.table th,
+.table td {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tr:hover {
+    background-color: #ddd;
+}

@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+
+  postgres:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: smartinfoAuth
+      POSTGRES_USER: smartInfo
+      POSTGRES_PASSWORD: smartInfo123**
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "smartinfo@smartinfo.com"
+      PGADMIN_DEFAULT_PASSWORD: "smartinfo123"
+    ports:
+      - "80:80"
+    depends_on:
+      - postgres
